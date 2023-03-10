@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33505.110
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFThreeDogsDistillery2", "WPFThreeDogsDistillery2.csproj", "{BF36871C-E20E-4214-B789-F6819769BF14}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{182F453E-82C2-4876-A5A2-4C4A7FD02242}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

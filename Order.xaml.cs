@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WPFThreeDogsDistillery2
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Order.xaml
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class Order : Page
     {
-        public MainWindow()
+        public Order()
         {
             InitializeComponent();
         }

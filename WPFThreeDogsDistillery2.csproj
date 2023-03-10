@@ -7,4 +7,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="red_table.de2d1a72c25fd17b702a.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="red_table.de2d1a72c25fd17b702a.jpg" />
+  </ItemGroup>
+
 </Project>

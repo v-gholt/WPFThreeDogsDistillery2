@@ -5,10 +5,89 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPFThreeDogsDistillery2"
       mc:Ignorable="d" 
-      d:DesignHeight="350" d:DesignWidth="500"
+      d:DesignHeight="1000" d:DesignWidth="1500"
       Title="Order">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+
+        <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS" 
+ FontWeight="Bold" FontSize="18" Foreground="Tan">
+            Choose Liquor Type:
+        </Label>
+        <Grid Margin="10" Grid.Column="1" Grid.Row="1">
+            <Border Padding="5" Background="Tan" Margin="-240,-35,255,505" Grid.Row="0">
+                <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Margin="38,21,0,0" Width="212"/>
+            </Border>
+            <Border Grid.Row="0" Padding="5" Background="Tan" Grid.ColumnSpan="2" Margin="31,-35,65,505">
+                <Label VerticalAlignment="Center" Foreground="DarkRed" HorizontalAlignment="Left" Width="988" Margin="57,0,0,0" Content="Three Dog's Distillery- Order" FontWeight="Bold" FontSize="36"/>
+            </Border>
+            <ListBox Name="PageListBox" Grid.Column="1" Margin="360,10,65,533" Background="Tan" Foreground="DarkRed" SelectionChanged="PageListBox_SelectionChanged" FontSize="18" FontWeight="Bold" Width="200">
+                <ListBoxItem>Log In</ListBoxItem>
+                <ListBoxItem Selected="ListBoxItem_Selected_1">Sign Up</ListBoxItem>
+                <Button HorizontalAlignment="Left" Click="Button_Click" Foreground="#FF830F0F" FontWeight="Bold">Home</Button>
+            </ListBox>
+
+
+
+            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" Margin="0,0,91,445">
+                <Label FontWeight="Bold" Content="Bottle:" Height="120"/>
+                <Label Margin="0,0,0,5" FontWeight="Bold"/>
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
+                <Label Margin="0,0,0,5" FontWeight="Bold">Label:</Label>
+                <Label Margin="0,0,0,5" FontWeight="Bold"></Label>
+            </StackPanel>
+
+            <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" 
+           HorizontalAlignment="Left">
+                <DataGrid  AutoGenerateColumns="False" RowHeaderWidth="0" Margin="-179,-161,179,161" >
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Height" Value="35" />
+                            <Setter Property="Padding" Value="5" />
+                            <Setter Property="Background" Value="tan" />
+                            <Setter Property="Foreground" Value="DarkRed" />
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Liquor Type" />
+                        <DataGridTextColumn Header="Flavor"  />
+                        <DataGridTextColumn Header="Bottle Type"  />
+                        <DataGridTextColumn Header="Quantity"  />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Grid>
+        <Border Padding="2" Background="Tan" BorderThickness="1" Grid.Row="1" Margin="198,866,10,0" Grid.ColumnSpan="2">
+            <Label Foreground="DarkRed" HorizontalAlignment="Left" Width="389" Margin="20,21,0,24" Content="Three Dog's Distillery" FontWeight="Bold" FontSize="24" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.503"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0.325"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+        </Border>
+        <Border Padding="2" Background="Tan" BorderThickness="1" Margin="0,866,10,0"  Grid.Row="1">
+            <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Margin="40,15,0,7" Width="201" Height="75"/>
+        </Border>
+        <ListBox Name="FooterBox" Grid.Column="1" Margin="1138,876,10,0" Background="Tan" Foreground="#FF9A1F1F" SelectionChanged="PageListBox_SelectionChanged" FontSize="14" Grid.Row="1" BorderBrush="{x:Null}" FontWeight="Bold">
+            <Button HorizontalAlignment="Left" Click="Button_Click" Foreground="#FF8D0E0E" Content="Home"/>
+            <Button HorizontalAlignment="Left" Click="Button_Click" Foreground="#FF8D0E0E">Contact Nick</Button>
+            <Button HorizontalAlignment="Left" Click="Button_Click" Foreground="#FF8D0E0E">About Us</Button>
+        </ListBox>
     </Grid>
 </Page>

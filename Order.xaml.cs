@@ -27,7 +27,8 @@ namespace WPFThreeDogsDistillery2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Home home = new Home();
+            this.NavigationService.Navigate(home);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -42,8 +43,17 @@ namespace WPFThreeDogsDistillery2
 
         private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
         {
-            Home home = new Home();
-            this.NavigationService.Navigate(home);
+
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonAddName_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -24,34 +24,39 @@
             Choose Liquor Type:
         </Label>
         <Grid Margin="10" Grid.Column="1" Grid.Row="1">
-            <Border Padding="5" Background="Tan" Margin="-240,-35,255,505" Grid.Row="0">
-                <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Margin="38,21,0,0" Width="212"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1018*"/>
+                <ColumnDefinition Width="27*"/>
+                <ColumnDefinition Width="74*"/>
+                <ColumnDefinition Width="131*"/>
+            </Grid.ColumnDefinitions>
+            <Border Padding="5" Background="Tan" Margin="-250,-36,33,809" Grid.Row="0">
+                <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Margin="38,21,0,28" Width="212"/>
             </Border>
-            <Border Grid.Row="0" Padding="5" Background="Tan" Grid.ColumnSpan="2" Margin="31,-35,65,505">
+            <Border Grid.Row="0" Padding="5" Background="Tan" Margin="31,-35,0,810" Grid.ColumnSpan="4">
                 <Label VerticalAlignment="Center" Foreground="DarkRed" HorizontalAlignment="Left" Width="988" Margin="57,0,0,0" Content="Three Dog's Distillery- Order" FontWeight="Bold" FontSize="36"/>
             </Border>
-            <ListBox Name="PageListBox" Grid.Column="1" Margin="360,10,65,533" Background="Tan" Foreground="DarkRed" SelectionChanged="PageListBox_SelectionChanged" FontSize="18" FontWeight="Bold" Width="200">
+            <ListBox Name="PageListBox" Margin="12,-5,0,815" Background="Tan" Foreground="DarkRed" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="2" BorderBrush="{x:Null}">
                 <ListBoxItem>Log In</ListBoxItem>
-                <ListBoxItem Selected="ListBoxItem_Selected_1">Sign Up</ListBoxItem>
-                <Button HorizontalAlignment="Left" Click="Button_Click" Foreground="#FF830F0F" FontWeight="Bold">Home</Button>
+                <ListBoxItem>Sign Up</ListBoxItem>
+                <Button HorizontalAlignment="Left" Foreground="#FF830F0F" FontWeight="Bold">Home</Button>
             </ListBox>
 
 
 
-            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" Margin="0,0,91,445">
-                <Label FontWeight="Bold" Content="Bottle:" Height="120"/>
+            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" Margin="-219,145,10,514" Grid.ColumnSpan="4">
+                <Label FontWeight="Bold" Content="Design your Bottle:" Height="120" Foreground="#FFE62B2B" FontSize="18" VerticalAlignment="Top"/>
                 <Label Margin="0,0,0,5" FontWeight="Bold"/>
             </StackPanel>
 
-
-            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
-                <Label Margin="0,0,0,5" FontWeight="Bold">Label:</Label>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="-219,504,932,336">
+                <Label Margin="0,0,0,5" FontWeight="Bold" Height="447" Foreground="#FFCC2424" FontSize="18" Content="Design Your Label:" VerticalAlignment="Top"/>
                 <Label Margin="0,0,0,5" FontWeight="Bold"></Label>
             </StackPanel>
 
-            <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" 
+            <Grid Grid.Column="0" VerticalAlignment="Top" 
            HorizontalAlignment="Left">
-                <DataGrid  AutoGenerateColumns="False" RowHeaderWidth="0" Margin="-179,-161,179,161" >
+                <DataGrid  AutoGenerateColumns="False" RowHeaderWidth="0" Margin="-230,437,46,-437" >
                     <DataGrid.ColumnHeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Height" Value="35" />
@@ -67,9 +72,25 @@
                         <DataGridTextColumn Header="Quantity"  />
                     </DataGrid.Columns>
                 </DataGrid>
+                <DataGrid  AutoGenerateColumns="False" RowHeaderWidth="0" Margin="-230,740,46,-740" >
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Height" Value="35" />
+                            <Setter Property="Padding" Value="5" />
+                            <Setter Property="Background" Value="tan" />
+                            <Setter Property="Foreground" Value="DarkRed" />
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Label Name" />
+                        <DataGridTextColumn Header="Label Message"  />
+                        <DataGridTextColumn Header="Background Color"  />
+                        <DataGridTextColumn Header="Background Image"  />
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
         </Grid>
-        <Border Padding="2" Background="Tan" BorderThickness="1" Grid.Row="1" Margin="198,866,10,0" Grid.ColumnSpan="2">
+        <Border Padding="2" Background="Tan" BorderThickness="1" Grid.Row="1" Margin="198,843,10,0" Grid.ColumnSpan="2">
             <Label Foreground="DarkRed" HorizontalAlignment="Left" Width="389" Margin="20,21,0,24" Content="Three Dog's Distillery" FontWeight="Bold" FontSize="24" RenderTransformOrigin="0.5,0.5">
                 <Label.RenderTransform>
                     <TransformGroup>
@@ -81,13 +102,15 @@
                 </Label.RenderTransform>
             </Label>
         </Border>
-        <Border Padding="2" Background="Tan" BorderThickness="1" Margin="0,866,10,0"  Grid.Row="1">
-            <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Margin="40,15,0,7" Width="201" Height="75"/>
+        <Border Padding="2" Background="Tan" BorderThickness="1" Margin="0,843,10,0"  Grid.Row="1">
+            <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Center" Margin="0,14,0,7" Width="200"/>
         </Border>
-        <ListBox Name="FooterBox" Grid.Column="1" Margin="1138,876,10,0" Background="Tan" Foreground="#FF9A1F1F" SelectionChanged="PageListBox_SelectionChanged" FontSize="14" Grid.Row="1" BorderBrush="{x:Null}" FontWeight="Bold">
-            <Button HorizontalAlignment="Left" Click="Button_Click" Foreground="#FF8D0E0E" Content="Home"/>
-            <Button HorizontalAlignment="Left" Click="Button_Click" Foreground="#FF8D0E0E">Contact Nick</Button>
-            <Button HorizontalAlignment="Left" Click="Button_Click" Foreground="#FF8D0E0E">About Us</Button>
+        <ListBox Name="FooterBox" Grid.Column="1" Margin="1138,843,10,0" Background="Tan" Foreground="#FF9A1F1F" FontSize="14" Grid.Row="1" BorderBrush="{x:Null}" FontWeight="Bold">
+            <Button HorizontalAlignment="Left" Foreground="#FF8D0E0E" Content="Home"/>
+            <Button HorizontalAlignment="Left" Foreground="#FF8D0E0E">Contact Nick</Button>
+            <Button HorizontalAlignment="Left" Foreground="#FF8D0E0E">About Us</Button>
         </ListBox>
+        <Border BorderBrush="#FFA20D0D" BorderThickness="3" Grid.Row="1" Margin="0,521,10,103" Grid.ColumnSpan="2"/>
+        <Border BorderBrush="#FFA20D0D" BorderThickness="3" Grid.Row="1" Margin="0,126,10,416" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>

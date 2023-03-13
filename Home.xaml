@@ -25,7 +25,7 @@
         <Border Grid.Row="0" Grid.Column="1" Padding="5" Background="Tan" Grid.ColumnSpan="1" Margin="40,0,0,366">
             <Label VerticalAlignment="Center" Foreground="DarkRed" HorizontalAlignment="Left" Width="988" Margin="5,0,0,0" Content="Welcome to Three Dog's Distillery- Custom Made Spirits" FontWeight="Bold" FontSize="36"/>
         </Border>
-        <ListBox Name="PageListBox" Grid.Column="1" Margin="1098,36,10,407" Background="Tan" Foreground="DarkRed" SelectionChanged="PageListBox_SelectionChanged" FontSize="18" FontWeight="Bold">
+        <ListBox Name="PageListBox" Grid.Column="1" Margin="1098,36,10,407" Background="Tan" Foreground="DarkRed" SelectionChanged="PageListBox_SelectionChanged" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}">
             <ListBoxItem>Log In</ListBoxItem>
             <ListBoxItem Selected="ListBoxItem_Selected_1">Sign Up</ListBoxItem>
             <Button HorizontalAlignment="Left" Click="Button_Click" Foreground="#FF830F0F" FontWeight="Bold">Order</Button>

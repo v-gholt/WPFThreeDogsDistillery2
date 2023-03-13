@@ -37,7 +37,6 @@ namespace WPFThreeDogsDistillery2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // View Expense Report
             Order order = new Order();
             this.NavigationService.Navigate(order);
         }

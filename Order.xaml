@@ -30,28 +30,41 @@
                 <ColumnDefinition Width="74*"/>
                 <ColumnDefinition Width="131*"/>
             </Grid.ColumnDefinitions>
-            <Border Padding="5" Background="Tan" Margin="-250,-36,33,809" Grid.Row="0">
-                <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Margin="38,21,0,28" Width="212"/>
+            <Border Padding="5" Background="Tan" Margin="-250,-36,272,870" Grid.Row="0">
+                <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Margin="21,-5,0,0" Width="223"/>
             </Border>
-            <Border Grid.Row="0" Padding="5" Background="Tan" Margin="31,-35,0,810" Grid.ColumnSpan="4">
-                <Label VerticalAlignment="Center" Foreground="DarkRed" HorizontalAlignment="Left" Width="988" Margin="57,0,0,0" Content="Three Dog's Distillery- Order" FontWeight="Bold" FontSize="36"/>
+            <Border Grid.Row="0" Padding="5" Background="Tan" Margin="31,-35,0,870" Grid.ColumnSpan="4">
+                <Label VerticalAlignment="Top" Foreground="DarkRed" HorizontalAlignment="Left" Width="988" Margin="-5,1,0,0" Content="Three Dog's Distillery- Order" FontWeight="Bold" FontSize="36"/>
             </Border>
-            <ListBox Name="PageListBox" Margin="12,-5,0,815" Background="Tan" Foreground="DarkRed" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="2" BorderBrush="{x:Null}">
-                <ListBoxItem>Log In</ListBoxItem>
+            <ListBox Name="PageListBox" Margin="37,-36,0,870" Background="Tan" Foreground="DarkRed" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="2" BorderBrush="{x:Null}">
+                <ListBoxItem Selected="ListBoxItem_Selected">Log In</ListBoxItem>
                 <ListBoxItem>Sign Up</ListBoxItem>
-                <Button HorizontalAlignment="Left" Foreground="#FF830F0F" FontWeight="Bold">Home</Button>
+                <Button Click="Button_Click" HorizontalAlignment="Left" Foreground="#FF830F0F" FontWeight="Bold">Home</Button>
             </ListBox>
 
-
-
-            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" Margin="-219,145,10,514" Grid.ColumnSpan="4">
-                <Label FontWeight="Bold" Content="Design your Bottle:" Height="120" Foreground="#FFE62B2B" FontSize="18" VerticalAlignment="Top"/>
-                <Label Margin="0,0,0,5" FontWeight="Bold"/>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="-209,84,509,729">
+                <Label Foreground="#FFE62B2B" FontSize="14" Content="Choose Your Spirit:&#xA;&#xA;*$100 per bottle&#xA;-add $50 for Bourbon" FontWeight="Bold" Height="92" Width="200"/>
+                <Button Content="BRANDY-  Made &#xA;from all natural&#xA; fruits and quality&#xA; sugar. Fermented &#xA;for 30 days." FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click" FontSize="10"/>
+                <Button Content="BOURBON- Made &#xA;from barley and&#xA; rye. Fermented&#xA; for 30 days. &#xA;Aged in &#xA;min-barrel &#xA;for 60 days." FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                <Button Content="WHISKEY- Made &#xA;from barley and&#xA;grains. Fermented&#xA;for 30 days.&#xA;Aged with chips&#xA;for 30 days." FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                <Button Content="MOONSHINE- Made &#xA;from corn, barley,&#xA;and yeast. Double&#xA;distilled for&#xA;smooth taste&#xA;and quality." FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_2" FontSize="10"/>
+                <Button Content="VODKA- Made &#xA;from wheat, rye,&#xA;or potato.&#xA;Fermented for&#xA;30 days.&#xA;Triple distilled." FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_1" FontSize="10"/>
             </StackPanel>
-
-            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="-219,504,932,336">
-                <Label Margin="0,0,0,5" FontWeight="Bold" Height="447" Foreground="#FFCC2424" FontSize="18" Content="Design Your Label:" VerticalAlignment="Top"/>
-                <Label Margin="0,0,0,5" FontWeight="Bold"></Label>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="-209,199,517,616">
+                <Label Foreground="#FFE62B2B" FontSize="14" Content="Choose Your Flavor:&#xA;&#xA;*optional" FontWeight="Bold" Height="92" Width="200"/>
+                <Button Content="CHERRY" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click" FontSize="10"/>
+                <Button Content="APPLE" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                <Button Content="CITRUS" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                <Button Content="WATERMELON" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_2" FontSize="10"/>
+                <Button Content="ESPRESSO" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_1" FontSize="10"/>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="-209,307,517,508">
+                <Label Foreground="#FFE62B2B" FontSize="14" Content="Choose Your Bottle:&#xD;&#xA;&#xD;&#xA;*add $25 for Fancy Bottle&#xD;&#xA;*750ml bottles&#xD;&#xA;-750ml total in minis" FontWeight="Bold" Height="101" Width="200"/>
+                <Button Content="FANCY" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click" FontSize="10"/>
+                <Button Content="STANDARD" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                <Button Content="MASON JAR" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                <Button Content="15 MINI BOTTLES" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_2" FontSize="10"/>
+                <Button Content="15 MINI &#xA;MASON JARS" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_1" FontSize="10"/>
             </StackPanel>
 
             <Grid Grid.Column="0" VerticalAlignment="Top" 
@@ -90,27 +103,17 @@
                 </DataGrid>
             </Grid>
         </Grid>
-        <Border Padding="2" Background="Tan" BorderThickness="1" Grid.Row="1" Margin="198,843,10,0" Grid.ColumnSpan="2">
-            <Label Foreground="DarkRed" HorizontalAlignment="Left" Width="389" Margin="20,21,0,24" Content="Three Dog's Distillery" FontWeight="Bold" FontSize="24" RenderTransformOrigin="0.5,0.5">
-                <Label.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="-0.503"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="-0.325"/>
-                    </TransformGroup>
-                </Label.RenderTransform>
-            </Label>
+        <Border Padding="2" Background="Tan" BorderThickness="1" Grid.Row="1" Margin="198,864,10,0" Grid.ColumnSpan="2">
+
         </Border>
-        <Border Padding="2" Background="Tan" BorderThickness="1" Margin="0,843,10,0"  Grid.Row="1">
-            <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Center" Margin="0,14,0,7" Width="200"/>
+        <Border Padding="2" Background="Tan" BorderThickness="1" Margin="0,864,10,0"  Grid.Row="1">
+            <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Margin="7,5,0,-5" Width="172"/>
         </Border>
-        <ListBox Name="FooterBox" Grid.Column="1" Margin="1138,843,10,0" Background="Tan" Foreground="#FF9A1F1F" FontSize="14" Grid.Row="1" BorderBrush="{x:Null}" FontWeight="Bold">
-            <Button HorizontalAlignment="Left" Foreground="#FF8D0E0E" Content="Home"/>
+        <ListBox Name="FooterBox" Grid.Column="1" Margin="1138,864,10,-13" Background="Tan" Foreground="#FF9A1F1F" Grid.Row="1" BorderBrush="{x:Null}" FontWeight="Bold" FontSize="10">
+            <Button Click="Button_Click" HorizontalAlignment="Left" Foreground="#FF8D0E0E" Content="Home"/>
             <Button HorizontalAlignment="Left" Foreground="#FF8D0E0E">Contact Nick</Button>
             <Button HorizontalAlignment="Left" Foreground="#FF8D0E0E">About Us</Button>
         </ListBox>
-        <Border BorderBrush="#FFA20D0D" BorderThickness="3" Grid.Row="1" Margin="0,521,10,103" Grid.ColumnSpan="2"/>
-        <Border BorderBrush="#FFA20D0D" BorderThickness="3" Grid.Row="1" Margin="0,126,10,416" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,72,0,0" Grid.Row="1" TextWrapping="Wrap" Text="DESIGN YOUR BOTTLE:" VerticalAlignment="Top" Height="29" Width="220" Foreground="#FFAD0A0A" FontSize="18" FontWeight="Bold"/>
     </Grid>
 </Page>

@@ -52,19 +52,39 @@
             </StackPanel>
             <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="-209,199,517,616">
                 <Label Foreground="#FFE62B2B" FontSize="14" Content="Choose Your Flavor:&#xA;&#xA;*optional" FontWeight="Bold" Height="92" Width="200"/>
-                <Button Content="CHERRY" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click" FontSize="10"/>
-                <Button Content="APPLE" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
-                <Button Content="CITRUS" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
-                <Button Content="WATERMELON&#xD;&#xA;CANDY" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_2" FontSize="10" HorizontalAlignment="Center"/>
-                <Button Content="ESPRESSO" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_1" FontSize="10"/>
+                <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click" FontSize="10">
+                    <Image Source="/cherry.jpg" Height="81" Width="90"></Image>
+                </Button>
+                <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10">
+                    <Image Source="/apple.jpg" Height="81" Width="90"></Image>
+                </Button>
+                <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10">
+                    <Image Source="/citrus2.jpg" Height="81" Width="90"></Image>
+                </Button>
+                <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_2" FontSize="10" HorizontalAlignment="Center">
+                    <Image Source="/candy.jpg" Height="81" Width="90"></Image>
+                </Button>
+                <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_1" FontSize="10">
+                    <Image Source="/espresso.jpg" Height="81" Width="90"></Image>
+                </Button>
             </StackPanel>
             <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="-209,307,517,508">
                 <Label Foreground="#FFE62B2B" FontSize="14" Content="Choose Your Bottle:&#xD;&#xA;&#xD;&#xA;*add $25 for Fancy Bottle&#xD;&#xA;*750ml bottles&#xD;&#xA;-750ml total in minis" FontWeight="Bold" Height="101" Width="200"/>
-                <Button Content="FANCY" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click" FontSize="10"/>
-                <Button Content="STANDARD" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
-                <Button Content="MASON JAR" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
-                <Button Content="15 MINI BOTTLES" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_2" FontSize="10"/>
-                <Button Content="15 MINI &#xA;MASON JARS" FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_1" FontSize="10"/>
+                <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click" FontSize="10">
+                    <Image Source="/fancy.jpg" Height="81" Width="90"></Image>
+                </Button>
+                <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10">
+                    <Image Source="/standard.jpg" Height="81" Width="90"></Image>
+                </Button>
+                <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10">
+                    <Image Source="/mason.jpg" Height="81" Width="90"></Image>
+                </Button>
+                <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_2" FontSize="10">
+                    <Image Source="/mini.jpg" Height="81" Width="90"></Image>
+                </Button>
+                <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" Click="Button_Click_1" FontSize="10">
+                    <Image Source="/minimason.jpg" Height="81" Width="90"></Image>
+                </Button>
             </StackPanel>
 
             <Grid Grid.Column="0" VerticalAlignment="Top" 
@@ -107,15 +127,23 @@
             <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Fantasy" FontFamily="Fantasy" HorizontalAlignment="Left" Margin="31,628,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
             <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Courier" FontFamily="Courier" HorizontalAlignment="Left" Margin="150,628,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
             <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Roman" FontFamily="Roman" HorizontalAlignment="Left" Margin="248,627,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Arial" FontFamily="Arial" HorizontalAlignment="Left" Margin="-192,730,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Cursive" FontFamily="Cursive" HorizontalAlignment="Left" Margin="-89,730,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Fantasy" FontFamily="Fantasy" HorizontalAlignment="Left" Margin="31,730,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Courier" FontFamily="Courier" HorizontalAlignment="Left" Margin="145,730,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Roman" FontFamily="Roman" HorizontalAlignment="Left" Margin="248,730,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
             <RadioButton Background="Tan" Foreground="Blue" FontSize="12" FontWeight="Bold" Content="Blue" HorizontalAlignment="Left" Margin="-192,655,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
             <RadioButton Background="Tan" Foreground="red" FontSize="12" FontWeight="Bold" Content="Red" HorizontalAlignment="Left" Margin="-89,656,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
             <RadioButton Background="Tan" Foreground="green" FontSize="12" FontWeight="Bold" Content="Green" HorizontalAlignment="Left" Margin="31,655,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
             <RadioButton Background="Tan" Foreground="yellow" FontSize="12" FontWeight="Bold" Content="Yellow" HorizontalAlignment="Left" Margin="150,656,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
-            <RadioButton Background="Tan" Foreground="purple" FontSize="12" FontWeight="Bold" Content="Purle" HorizontalAlignment="Left" Margin="248,656,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="purple" FontSize="12" FontWeight="Bold" Content="Purple" HorizontalAlignment="Left" Margin="248,656,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="Blue" FontSize="12" FontWeight="Bold" Content="Blue" HorizontalAlignment="Left" Margin="-192,754,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="red" FontSize="12" FontWeight="Bold" Content="Red" HorizontalAlignment="Left" Margin="-89,754,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="green" FontSize="12" FontWeight="Bold" Content="Green" HorizontalAlignment="Left" Margin="31,754,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="yellow" FontSize="12" FontWeight="Bold" Content="Yellow" HorizontalAlignment="Left" Margin="146,756,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
+            <RadioButton Background="Tan" Foreground="purple" FontSize="12" FontWeight="Bold" Content="Purple" HorizontalAlignment="Left" Margin="248,756,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
         </Grid>
-        <Border Padding="2" Background="Tan" BorderThickness="1" Grid.Row="1" Margin="198,864,10,0" Grid.ColumnSpan="2">
-
-        </Border>
+        <Border Padding="2" Background="Tan" BorderThickness="1" Grid.Row="1" Margin="198,864,10,0" Grid.ColumnSpan="2"/>
         <Border Padding="2" Background="Tan" BorderThickness="1" Margin="0,864,10,0"  Grid.Row="1">
             <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Margin="7,5,0,-5" Width="172"/>
         </Border>

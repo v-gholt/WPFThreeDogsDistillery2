@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WPFThreeDogsDistillery2
 {
     /// <summary>
-    /// Interaction logic for Order.xaml
+    /// Interaction logic for Order2.xaml
     /// </summary>
-    public partial class Order : Page
+    public partial class Order2 : Page
     {
-        public Order()
+        public Order2()
         {
             InitializeComponent();
         }
@@ -29,31 +29,6 @@ namespace WPFThreeDogsDistillery2
         {
             Home2 home = new Home2();
             this.NavigationService.Navigate(home);
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonAddName_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

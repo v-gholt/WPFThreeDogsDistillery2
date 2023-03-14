@@ -122,6 +122,12 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
+
+
+            <StackPanel>
+                <RadioButton Checked="RadioButton_Checked" Content="Arial" FontFamily="Arial"/>
+            </StackPanel>
+            
             <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Arial" FontFamily="Arial" HorizontalAlignment="Left" Margin="-192,628,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
             <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Cursive" FontFamily="Cursive" HorizontalAlignment="Left" Margin="-89,627,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>
             <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Fantasy" FontFamily="Fantasy" HorizontalAlignment="Left" Margin="31,628,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Height="28" Width="103"/>

@@ -1,0 +1,93 @@
+﻿<Page x:Class="WPFThreeDogsDistillery2.Order2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFThreeDogsDistillery2"
+      mc:Ignorable="d" 
+      Height="auto"
+      Width="auto"
+      MinWidth="1920"
+      MinHeight="1080"
+      Title="Home2">
+
+    <StackPanel>
+        <StackPanel Background="Tan" Orientation="Horizontal">
+            <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" />
+            <TextBox Margin="10,0,10,0" Background="Tan" VerticalAlignment="Center" Foreground="DarkRed" HorizontalAlignment="Left" Text="Three Dog's Distillery- Order" FontWeight="Bold" FontSize="36"/>
+            <StackPanel Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0,0,0">
+                <Button Margin="10,0,10,0" Background="Tan" FontWeight="Bold" Foreground="DarkRed" FontSize="18">Log In</Button>
+                <Button Margin="10,0,10,0" Background="Tan" FontWeight="Bold" Foreground="DarkRed" FontSize="18">Sign Up</Button>
+                <Button Click="Button_Click" Margin="10,0,10,0" Background="Tan" FontWeight="Bold" Foreground="DarkRed" FontSize="18">Home</Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="left">
+            <StackPanel Margin="10,10,0,10" Background="White">
+                <TextBlock HorizontalAlignment="left" Text="DESIGN YOUR BOTTLE:" Height="29" Width="220" Foreground="#FFAD0A0A" FontSize="18" FontWeight="Bold"/>
+                <TextBlock HorizontalAlignment="left" Foreground="#FFE62B2B" FontSize="14" Text="Choose Your Spirit" FontWeight="Bold"/>
+                <TextBlock HorizontalAlignment="left" Foreground="#FFE62B2B" FontSize="10" Text="*$100 per bottle- add $50 for Bourbon" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="BRANDY-  Made &#xA;from all natural&#xA; fruits and quality&#xA; sugar. Fermented &#xA;for 30 days." FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                    <Button Content="BOURBON- Made &#xA;from barley and&#xA; rye. Fermented&#xA; for 30 days. &#xA;Aged in &#xA;min-barrel &#xA;for 60 days." FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                    <Button Content="WHISKEY- Made &#xA;from barley and&#xA;grains. Fermented&#xA;for 30 days.&#xA;Aged with chips&#xA;for 30 days." FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                    <Button Content="MOONSHINE- Made &#xA;from corn, barley,&#xA;and yeast. Double&#xA;distilled for&#xA;smooth taste&#xA;and quality." FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                    <Button Content="VODKA- Made &#xA;from wheat, rye,&#xA;or potato.&#xA;Fermented for&#xA;30 days.&#xA;Triple distilled." FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10"/>
+                </StackPanel>
+                <TextBlock HorizontalAlignment="left" Foreground="#FFE62B2B" FontSize="14" Text="Choose Your Flavor" FontWeight="Bold"/>
+                <TextBlock HorizontalAlignment="left" Foreground="#FFE62B2B" FontSize="10" Text="*optional- add $50" FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10">
+                        <Image Source="/cherry.jpg" Height="81" Width="90"></Image>
+                    </Button>
+                    <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10">
+                        <Image Source="/apple.jpg" Height="81" Width="90"></Image>
+                    </Button>
+                    <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10">
+                        <Image Source="/citrus2.jpg" Height="81" Width="90"></Image>
+                    </Button>
+                    <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10">
+                        <Image Source="/candy.jpg" Height="81" Width="90"></Image>
+                    </Button>
+                    <Button FontWeight="Bold" Foreground="#FFE62B2B" Background="tan" Width="100" Height="100" BorderBrush="#FFD22727" FontSize="10">
+                        <Image Source="/espresso.jpg" Height="81" Width="90"></Image>
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>
+            <StackPanel Margin="10,10,0,10" Background="White">
+                <TextBlock HorizontalAlignment="left" Text="DESIGN YOUR LABEL:" Height="29" Width="220" Foreground="#FFAD0A0A" FontSize="18" FontWeight="Bold"/>
+                <StackPanel HorizontalAlignment="left">
+                    <TextBlock Foreground="#FFE62B2B" FontSize="14" Text="Choose Your Bottle's Name" FontWeight="Bold"/>
+                    <TextBlock Foreground="#FFE62B2B" FontSize="10" Text="*up to 50 characters" FontWeight="Bold"/>
+                    <StackPanel Margin="0,10,0,10" Orientation="Horizontal">
+                        <TextBox x:Name="txtName" Width="400" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" BorderBrush="#FF010512"/>
+                        <Button x:Name="btnAddName" Width="110" Height="20" Content="Add Bottle's Name" Foreground="#FF950A0A" BorderBrush="#FF7B1616" FontWeight="Bold"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,10,0,10" Orientation="Horizontal">
+                        <RadioButton Margin="0,0,10,0" Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Arial" FontFamily="Arial"/>
+                        <RadioButton Margin="0,0,10,0" Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Cursive" FontFamily="Cursive"/>
+                        <RadioButton Margin="0,0,10,0" Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Fantasy" FontFamily="Fantasy"/>
+                        <RadioButton Margin="0,0,10,0" Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Courier" FontFamily="Courier"/>
+                        <RadioButton Background="Tan" Foreground="DarkRed" FontSize="12" FontWeight="Bold" Content="Roman" FontFamily="Roman"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,10,0,10" Orientation="Horizontal">
+                        <RadioButton Margin="0,0,10,0" Background="Tan" Foreground="Blue" FontSize="12" FontWeight="Bold" Content="Blue"/>
+                        <RadioButton Margin="0,0,10,0" Background="Tan" Foreground="red" FontSize="12" FontWeight="Bold" Content="Red"/>
+                        <RadioButton Margin="0,0,10,0" Background="Tan" Foreground="green" FontSize="12" FontWeight="Bold" Content="Green"/>
+                        <RadioButton Margin="0,0,10,0" Background="Tan" Foreground="yellow" FontSize="12" FontWeight="Bold" Content="Yellow"/>
+                        <RadioButton Margin="0,0,10,0" Background="Tan" Foreground="purple" FontSize="12" FontWeight="Bold" Content="Purple"/>
+                    </StackPanel>
+                </StackPanel>
+                </StackPanel>
+        </StackPanel>
+        <StackPanel Background="Tan" Orientation="Horizontal">
+            <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Width="201" Height="75"/>
+            <TextBox Margin="500,0,10,0" Background="Tan" Foreground="DarkRed"  Width="389" Text="Three Dog's Distillery" FontWeight="Bold" FontSize="24"/>
+            <StackPanel  Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0,0,0">
+                <Button Click="Button_Click" Margin="10,0,10,0" Background="Tan" FontWeight="Bold" Foreground="DarkRed" FontSize="18">Home</Button>
+                <Button Margin="10,0,10,0" Background="Tan" FontWeight="Bold" Foreground="DarkRed" FontSize="18">Contact Nick</Button>
+                <Button Margin="10,0,10,0" Background="Tan" FontWeight="Bold" Foreground="DarkRed" FontSize="18">About Us</Button>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Page>

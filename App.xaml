@@ -4,6 +4,27 @@
              xmlns:local="clr-namespace:WPFThreeDogsDistillery2"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--A Style that affects all TextBlocks-->
+        <Style TargetType="RadioButton">
+            <Setter Property="Background" Value="Tan" />
+            <Setter Property="Foreground" Value="DarkRed"/>
+            <Setter Property="FontSize" Value="8"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="DarkRed"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Tan" />
+            <Setter Property="Foreground" Value="DarkRed"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="DarkRed"/>
+        </Style>
+
     </Application.Resources>
 </Application>

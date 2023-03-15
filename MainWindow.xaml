@@ -9,27 +9,4 @@
         Width="auto"
         Source="Home2.xaml">
 
-    <NavigationWindow.Resources>
-        <!--A Style that affects all TextBlocks-->
-        <Style TargetType="RadioButton">
-            <Setter Property="Background" Value="Tan" />
-            <Setter Property="Foreground" Value="DarkRed"/>
-            <Setter Property="FontSize" Value="12"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="Height" Value="28"/>
-            <Setter Property="Width" Value="103"/>
-            <Setter Property="VerticalAlignment" Value="Top"/>
-        </Style>
-
-        <!--A Style that extends the previous TextBlock Style with an x:Key of TitleText-->
-        <Style BasedOn="{StaticResource {x:Type RadioButton}}"
-               TargetType="RadioButton"
-               x:Key="Arial">
-            <Setter Property="Content" Value="Arial"/>
-            <Setter Property="FontFamily" Value="Arial"/>
-                <!--<Setter Property="Checked" Value="RadioButtonArial_Checked"/>-->
-            </Style>
-    </NavigationWindow.Resources>
-
 </NavigationWindow>

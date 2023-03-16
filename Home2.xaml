@@ -17,9 +17,9 @@
             <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" />
             <TextBlock Margin="10,0,10,0" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Welcome to Three Dog's Distillery- Custom Made Spirits" FontSize="36"/>
             <StackPanel Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0,0,0">
-                <Button Margin="10,0,10,0" Background="Tan" FontWeight="Bold" Foreground="DarkRed" FontSize="18">Log In</Button>
-                <Button Margin="10,0,10,0" Background="Tan" FontWeight="Bold" Foreground="DarkRed" FontSize="18">Sign Up</Button>
-                <Button Click="Button_Click_Order" Margin="10,0,10,0" Background="Tan" FontWeight="Bold" Foreground="DarkRed" FontSize="18">Order</Button>
+                <Button Margin="10,0,10,0" FontSize="18">Log In</Button>
+                <Button Margin="10,0,10,0" FontSize="18">Sign Up</Button>
+                <Button Click="Button_Click_Order" Margin="10,0,10,0" FontSize="18">Order</Button>
             </StackPanel>
         </StackPanel>
         <StackPanel>

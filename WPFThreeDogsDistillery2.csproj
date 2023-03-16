@@ -14,12 +14,7 @@
     <None Remove="citrus2.jpg" />
     <None Remove="espresso.jpg" />
     <None Remove="fancy.jpg" />
-    <None Remove="mason.jpg" />
-    <None Remove="mini.jpg" />
-    <None Remove="minimason.jpg" />
-    <None Remove="moonshining.6ffbdf7501397904187d.jpeg" />
     <None Remove="red_table.de2d1a72c25fd17b702a.jpg" />
-    <None Remove="standard.jpg" />
     <None Remove="three_dogs_logo.8ae6f4828a986c6f5c01.jpg" />
   </ItemGroup>
 
@@ -30,12 +25,7 @@
     <Resource Include="citrus2.jpg" />
     <Resource Include="espresso.jpg" />
     <Resource Include="fancy.jpg" />
-    <Resource Include="mason.jpg" />
-    <Resource Include="mini.jpg" />
-    <Resource Include="minimason.jpg" />
-    <Resource Include="moonshining.6ffbdf7501397904187d.jpeg" />
     <Resource Include="red_table.de2d1a72c25fd17b702a.jpg" />
-    <Resource Include="standard.jpg" />
     <Resource Include="three_dogs_logo.8ae6f4828a986c6f5c01.jpg" />
   </ItemGroup>
 

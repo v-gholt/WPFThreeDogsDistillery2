@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFThreeDogsDistillery2.Models;
 
 namespace WPFThreeDogsDistillery2
 {
@@ -20,9 +21,15 @@ namespace WPFThreeDogsDistillery2
     /// </summary>
     public partial class Order2 : Page
     {
+
+        private readonly BottleModel _bottleModel;
+
         public Order2()
         {
             InitializeComponent();
+            _bottleModel = new BottleModel();
+            // The DataContext serves as the starting point of Binding Paths
+            DataContext = _bottleModel;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

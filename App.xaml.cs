@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WPFThreeDogsDistillery2.ViewModel;
 
 namespace WPFThreeDogsDistillery2
 {
@@ -13,5 +14,14 @@ namespace WPFThreeDogsDistillery2
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            WpfMVVMSample.MainWindow window = new MainWindow();
+            BottleViewModel VM = new BottleViewModel();
+            window.DataContext = VM;
+            window.Show();
+        }
     }
+
 }

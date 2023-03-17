@@ -18,7 +18,7 @@
             <StackPanel Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0,0,0">
                 <Button Style="{StaticResource HeaderButtons}">Log In</Button>
                 <Button Style="{StaticResource HeaderButtons}">Sign Up</Button>
-                <Button Click="Button_Click" Style="{StaticResource HeaderButtons}">Home</Button>
+                <Button Click="Button_Click_Home" Style="{StaticResource HeaderButtons}">Home</Button>
             </StackPanel>
         </StackPanel>
         <StackPanel HorizontalAlignment="left">
@@ -27,28 +27,28 @@
                 <TextBlock FontSize="14" Text="Choose Your Spirit"/>
                 <TextBlock FontSize="10" Text="*$100 per bottle- add $50 for Bourbon"/>
                 <StackPanel Margin="0,10,0,10" Orientation="Horizontal">
-                    <Button Content="BRANDY-  Made &#xA;from all natural&#xA; fruits and quality&#xA; sugar. Fermented &#xA;for 30 days."/>
-                    <Button Content="BOURBON- Made &#xA;from barley and&#xA; rye. Fermented&#xA; for 30 days. &#xA;Aged in &#xA;min-barrel &#xA;for 60 days."/>
-                    <Button Content="WHISKEY- Made &#xA;from barley and&#xA;grains. Fermented&#xA;for 30 days.&#xA;Aged with chips&#xA;for 30 days."/>
-                    <Button Content="MOONSHINE- Made &#xA;from corn, barley,&#xA;and yeast. Double&#xA;distilled for&#xA;smooth taste&#xA;and quality."/>
-                    <Button Content="VODKA- Made &#xA;from wheat, rye,&#xA;or potato.&#xA;Fermented for&#xA;30 days.&#xA;Triple distilled."/>
+                    <Button x:Name="Brandy" Click="Button_Click_Spirit" Content="BRANDY-  Made &#xA;from all natural&#xA; fruits and quality&#xA; sugar. Fermented &#xA;for 30 days."/>
+                    <Button x:Name="Bourbon" Click="Button_Click_Spirit" Content="BOURBON- Made &#xA;from barley and&#xA; rye. Fermented&#xA; for 30 days. &#xA;Aged in &#xA;min-barrel &#xA;for 60 days."/>
+                    <Button x:Name="Whiskey" Click="Button_Click_Spirit" Content="WHISKEY- Made &#xA;from barley and&#xA;grains. Fermented&#xA;for 30 days.&#xA;Aged with chips&#xA;for 30 days."/>
+                    <Button x:Name="Moonshine" Click="Button_Click_Spirit" Content="MOONSHINE- Made &#xA;from corn, barley,&#xA;and yeast. Double&#xA;distilled for&#xA;smooth taste&#xA;and quality."/>
+                    <Button x:Name="Vodka" Click="Button_Click_Spirit" Content="VODKA- Made &#xA;from wheat, rye,&#xA;or potato.&#xA;Fermented for&#xA;30 days.&#xA;Triple distilled."/>
                 </StackPanel>
                 <TextBlock FontSize="14" Text="Choose Your Flavor"/>
                 <TextBlock FontSize="10" Text="*optional- add $50"/>
                 <StackPanel Orientation="Horizontal">
-                    <Button>
+                    <Button Click="Button_Click_Flavor">
                         <Image Source="/cherry.jpg" Height="81" Width="90"></Image>
                     </Button>
-                    <Button>
+                    <Button Click="Button_Click_Flavor">
                         <Image Source="/apple.jpg" Height="81" Width="90"></Image>
                     </Button>
-                    <Button>
+                    <Button Click="Button_Click_Flavor">
                         <Image Source="/citrus2.jpg" Height="81" Width="90"></Image>
                     </Button>
-                    <Button>
+                    <Button Click="Button_Click_Flavor">
                         <Image Source="/candy.jpg" Height="81" Width="90"></Image>
                     </Button>
-                    <Button>
+                    <Button Click="Button_Click_Flavor">
                         <Image Source="/espresso.jpg" Height="81" Width="90"></Image>
                     </Button>
                 </StackPanel>
@@ -88,18 +88,18 @@
                         <Button x:Name="btnAddName" Width="110" Height="20" Content="Add Bottle's Name"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton Content="Arial" FontFamily="Arial"/>
-                        <RadioButton Content="Cursive" FontFamily="Cursive"/>
-                        <RadioButton Content="Fantasy" FontFamily="Fantasy"/>
-                        <RadioButton Content="Courier" FontFamily="Courier"/>
-                        <RadioButton Content="Roman" FontFamily="Roman"/>
+                        <RadioButton IsChecked="True" Click="Button_Click_Font" x:Name="Arial" Content="Arial" FontFamily="Arial"/>
+                        <RadioButton Click="Button_Click_Font" x:Name="Cursive" Content="Cursive" FontFamily="Cursive"/>
+                        <RadioButton Click="Button_Click_Font" x:Name="Fantasy" Content="Fantasy" FontFamily="Fantasy"/>
+                        <RadioButton Click="Button_Click_Font" x:Name="Courier" Content="Courier" FontFamily="Courier"/>
+                        <RadioButton Click="Button_Click_Font" x:Name="Roman" Content="Roman" FontFamily="Roman"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <RadioButton Foreground="Blue" Content="Blue"/>
-                        <RadioButton Foreground="red" Content="Red"/>
-                        <RadioButton Foreground="green" Content="Green"/>
-                        <RadioButton Foreground="yellow" Content="Yellow"/>
-                        <RadioButton Foreground="purple" Content="Purple"/>
+                        <RadioButton IsChecked="True" Click="Button_Click_Color" x:Name="Blue" Foreground="Blue" Content="Blue"/>
+                        <RadioButton Click="Button_Click_Color" x:Name="Red" Foreground="red" Content="Red"/>
+                        <RadioButton Click="Button_Click_Color" x:Name="Green" Foreground="green" Content="Green"/>
+                        <RadioButton Click="Button_Click_Color" x:Name="Yellow" Foreground="yellow" Content="Yellow"/>
+                        <RadioButton Click="Button_Click_Color" x:Name="Purple" Foreground="purple" Content="Purple"/>
                     </StackPanel>
                     <StackPanel Margin="0,10,0,0">
                         <TextBlock Foreground="Green" FontSize="14" Text="Preview"/>
@@ -112,7 +112,7 @@
             <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Width="201" Height="75"/>
             <TextBlock Margin="500,0,10,0" Background="Tan" Width="389" Text="Three Dog's Distillery" FontSize="24"/>
             <StackPanel  Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0,0,0">
-                <Button Click="Button_Click" Style="{StaticResource HeaderButtons}" FontSize="18">Home</Button>
+                <Button Click="Button_Click_Home" Style="{StaticResource HeaderButtons}" FontSize="18">Home</Button>
                 <Button Style="{StaticResource HeaderButtons}" FontSize="18">Contact Nick</Button>
                 <Button Style="{StaticResource HeaderButtons}" FontSize="18">About Us</Button>
             </StackPanel>

@@ -9,15 +9,15 @@ namespace WPFThreeDogsDistillery2.Models
 {
     public class Bottle : INotifyPropertyChanged
     {
-        private string spirit;
-        private string flavor;
+        private string? spirit;
+        private string? flavor;
         private int quantity;
 
         public string Spirit
         {
             get
             {
-                return spirit;
+                return spirit ?? string.Empty;
             }
             set
             {
@@ -29,7 +29,7 @@ namespace WPFThreeDogsDistillery2.Models
         {
             get
             {
-                return flavor;
+                return flavor ?? string.Empty;
             }
             set
             {
@@ -49,7 +49,7 @@ namespace WPFThreeDogsDistillery2.Models
                 OnPropertyChanged("Quantity");
             }
         }
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
         private void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)

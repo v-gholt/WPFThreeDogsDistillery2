@@ -16,11 +16,6 @@ namespace WPFThreeDogsDistillery2
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            base.OnStartup(e);
-            WpfMVVMSample.MainWindow window = new MainWindow();
-            BottleViewModel VM = new BottleViewModel();
-            window.DataContext = VM;
-            window.Show();
         }
     }
 

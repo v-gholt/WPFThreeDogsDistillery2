@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace WPFThreeDogsDistillery2.Models
 {
-    public class Bottle : INotifyPropertyChanged
+    public class BottleModel
     {
         private string? spirit;
         private string? flavor;
@@ -22,7 +22,6 @@ namespace WPFThreeDogsDistillery2.Models
             set
             {
                 spirit = value;
-                OnPropertyChanged("Spirit");
             }
         }
         public string Flavor
@@ -34,7 +33,6 @@ namespace WPFThreeDogsDistillery2.Models
             set
             {
                 flavor = value;
-                OnPropertyChanged("Flavor");
             }
         }
         public int Quantity
@@ -46,15 +44,6 @@ namespace WPFThreeDogsDistillery2.Models
             set
             {
                 quantity = value;
-                OnPropertyChanged("Quantity");
-            }
-        }
-        public event PropertyChangedEventHandler? PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }

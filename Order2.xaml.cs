@@ -43,7 +43,7 @@ namespace WPFThreeDogsDistillery2
         }
         private void Button_Click_Flavor(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("");
         }
         private void Button_Click_Font(object sender, RoutedEventArgs e)
         {
@@ -93,7 +93,5 @@ namespace WPFThreeDogsDistillery2
         }
     }
 
-    internal class BottleModel
-    {
-    }
+
 }

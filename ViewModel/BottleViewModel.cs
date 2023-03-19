@@ -6,59 +6,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WPFThreeDogsDistillery2.Models;
+using System.DirectoryServices.ActiveDirectory;
 
 namespace WPFThreeDogsDistillery2.ViewModel
 {
-    class BottleViewModel
+    public class BottleViewModel : INotifyPropertyChanged
     {
-        private IList<Bottle> _BottlesList;
+        private BottleModel bottle;
 
-        public BottleViewModel()
+        public BottleViewModel(BottleModel bottle)
         {
-            _BottlesList = new List<Bottle>
-            {
-                new Bottle{Quantity = 1,Spirit="Brandy",Flavor="Cherry"},
-            };
+            this.bottle = bottle;
         }
 
-        public IList<Bottle> Bottles
+        public string Spirit
         {
-            get { return _BottlesList; }
-            set { _BottlesList = value; }
-        }
-
-        private ICommand mUpdater;
-        public ICommand UpdateCommand
-        {
-            get
-            {
-                if (mUpdater == null)
-                    mUpdater = new Updater();
-                return mUpdater;
+            get { return bottle.Spirit; }
+            set 
+            { 
+                if (bottle.Spirit != value)
+                {
+                    bottle.Spirit = value;
+                    OnPropertyChanged("Spirit");
+                }
             }
+        }
+
+        public string Flavor
+        {
+            get { return bottle.Flavor; }
             set
             {
-                mUpdater = value;
+                if (bottle.Flavor != value)
+                {
+                    bottle.Flavor = value;
+                    OnPropertyChanged("Flavor");
+                }
             }
         }
 
-        private class Updater : ICommand
+        public int Quantity
         {
-            #region ICommand Members  
-
-            public bool CanExecute(object parameter)
+            get { return bottle.Quantity; }
+            set
             {
-                return true;
+                if (bottle.Quantity != value)
+                {
+                    bottle.Quantity = value;
+                    OnPropertyChanged("Quantity");
+                }
             }
+        }
 
-            public event EventHandler CanExecuteChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
-            public void Execute(object parameter)
-            {
-
-            }
-
-            #endregion
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

@@ -1,16 +1,20 @@
-﻿<NavigationWindow x:Class="WPFThreeDogsDistillery2.MainWindow" 
+﻿<Window x:Class="WPFThreeDogsDistillery2.MainWindow" 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFThreeDogsDistillery2"
-        xmlns:vm="clr-namespace:WPFThreeDogsDistillery2.ViewModel"
+        xmlns:vms="clr-namespace:WPFThreeDogsDistillery2.ViewModel"
+        xmlns:views="clr-namespace:WPFThreeDogsDistillery2.Views"
         mc:Ignorable="d"
         Title="ThreeDogsDistillery" 
         Height="auto" 
-        Width="auto"
-        Source="Home2.xaml">
+        Width="auto">
 
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vms:BottleViewModel}">
+            <views:Order3/>
+        </DataTemplate>
+    </Window.Resources>
 
-
-</NavigationWindow>
+</Window>

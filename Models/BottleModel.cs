@@ -9,9 +9,15 @@ namespace WPFThreeDogsDistillery2.Models
 {
     public class BottleModel
     {
+        private readonly LabelModel _label;
         private string? spirit;
         private string? flavor;
         private int quantity;
+
+        public BottleModel()
+        {
+            _label = new LabelModel();
+        }
 
         public string Spirit
         {

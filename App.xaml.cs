@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WPFThreeDogsDistillery2.Models;
 using WPFThreeDogsDistillery2.ViewModel;
 
 namespace WPFThreeDogsDistillery2

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPFThreeDogsDistillery2
+namespace WPFThreeDogsDistillery2.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Home3.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Home3 : UserControl
     {
-        public MainWindow()
+        public Home3()
         {
             InitializeComponent();
         }

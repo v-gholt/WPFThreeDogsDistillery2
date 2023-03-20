@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="WPFThreeDogsDistillery2.Views.Home3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFThreeDogsDistillery2.Views"
+             mc:Ignorable="d" 
+             Height="auto"
+             Width="auto"
+             MinWidth="1920"
+             MinHeight="1080">
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+
+    <StackPanel>
+        <StackPanel Background="Tan" Orientation="Horizontal">
+            <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" />
+            <TextBlock Margin="10,0,10,0" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Welcome to Three Dog's Distillery- Custom Made Spirits" FontSize="36"/>
+            <StackPanel Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0,0,0">
+                <Button Margin="10,0,10,0" FontSize="18">Log In</Button>
+                <Button Margin="10,0,10,0" FontSize="18">Sign Up</Button>
+                <Button Click="Button_Click_Order" Margin="10,0,10,0" FontSize="18">Order</Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel>
+            <StackPanel Margin="10,10,0,10" Orientation="Horizontal">
+                <Image HorizontalAlignment="Left"  VerticalAlignment="Top"  Source="red_table.de2d1a72c25fd17b702a.jpg" Width="600" Height="300"/>
+                <TextBlock Text="Three Dog's Distillery lets you design your own custom made spirits! Choose from 5 different spirits and 5 optional flavor infusions. Then choose what kind  of bottle you'd like and desgin you own custom made label with an optional message! You can make  100 mini bottles of your favorite flavor of vodka for your wedding with the date and a message for your guests. Or for your Dad's birthday you can design him an aged bottle of Cherry Bourbon in a fancy bottle  with his picture on the label.The possibilites are endless!"
+                         Background="White" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="600" Height="300"/>
+            </StackPanel>
+            <StackPanel Margin="10,0,0,10" Orientation="Horizontal">
+                <Image HorizontalAlignment="Left" Source="moonshining.6ffbdf7501397904187d.jpeg" Width="600" Height="300"/>
+                <TextBlock Text="Nick is a true artisan and artist. He's been crafting his own  spirits for over 20 years and he's finally fullilling his dream of sharing his premium products with the world. He handcrafts every bottle himself using his tried and true methods. He's uses state of the art distilling equipment. He's dedicated to using only quality ingredients. He ferments and ages to perfection to get a smooth even taste.Order your bottle today!"
+                         Background="White" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="600" Height="300"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Background="Tan" Orientation="Horizontal">
+            <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Width="201" Height="75"/>
+            <TextBlock Margin="500,0,10,0" Background="Tan" Width="389" Text="Three Dog's Distillery" FontSize="24"/>
+            <StackPanel  Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0,0,0">
+                <Button Click="Button_Click_Order" Margin="10,0,10,0" FontSize="18">Order</Button>
+                <Button Margin="10,0,10,0" FontSize="18">Contact Nick</Button>
+                <Button Margin="10,0,10,0" FontSize="18">About Us</Button>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+    
+</UserControl>

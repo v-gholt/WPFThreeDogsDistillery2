@@ -39,7 +39,7 @@ namespace WPFThreeDogsDistillery2
         }
         private void Button_Click_Spirit(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("");
         }
         private void Button_Click_Flavor(object sender, RoutedEventArgs e)
         {

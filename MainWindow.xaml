@@ -5,16 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFThreeDogsDistillery2"
         xmlns:vms="clr-namespace:WPFThreeDogsDistillery2.ViewModel"
-        xmlns:views="clr-namespace:WPFThreeDogsDistillery2.Views"
         mc:Ignorable="d"
         Title="ThreeDogsDistillery" 
         Height="auto" 
-        Width="auto">
+        Width="auto"
+        >
 
-    <Window.Resources>
-        <DataTemplate DataType="{x:Type vms:BottleViewModel}">
-            <views:Order3/>
-        </DataTemplate>
-    </Window.Resources>
 
 </Window>

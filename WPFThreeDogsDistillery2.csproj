@@ -14,7 +14,6 @@
     <None Remove="citrus2.jpg" />
     <None Remove="espresso.jpg" />
     <None Remove="fancy.jpg" />
-    <None Remove="red_table.de2d1a72c25fd17b702a.jpg" />
     <None Remove="three_dogs_logo.8ae6f4828a986c6f5c01.jpg" />
   </ItemGroup>
 
@@ -25,8 +24,12 @@
     <Resource Include="citrus2.jpg" />
     <Resource Include="espresso.jpg" />
     <Resource Include="fancy.jpg" />
-    <Resource Include="Views\red_table.de2d1a72c25fd17b702a.jpg" />
+    <Resource Include="red_table.de2d1a72c25fd17b702a.jpg" />
     <Resource Include="three_dogs_logo.8ae6f4828a986c6f5c01.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\" />
   </ItemGroup>
 
 </Project>

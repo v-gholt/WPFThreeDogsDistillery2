@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace WPFThreeDogsDistillery2.Models
 {
-    public class LabelModel
+    public class FontColorModel
     {
-        public LabelModel(string name)
+        public FontColorModel(string name, string color)
         {
             Name = name;
+            Color = color;
         }
         public string Name { get; set; }
+        public string Color { get; set; }
 
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

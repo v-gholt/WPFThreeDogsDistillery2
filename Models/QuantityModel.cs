@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace WPFThreeDogsDistillery2.Models
 {
-    public class LabelModel
+    public class QuantityModel
     {
-        public LabelModel(string name)
+
+        public QuantityModel(int quantity)
         {
-            Name = name;
+            Quantity = quantity;
         }
-        public string Name { get; set; }
+        public int Quantity { get; set; }
 
     }
 }

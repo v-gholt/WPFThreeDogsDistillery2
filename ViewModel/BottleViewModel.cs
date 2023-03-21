@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WPFThreeDogsDistillery2.Models;
-using WPFThreeDogsDistillery2.Views;
 using System.DirectoryServices.ActiveDirectory;
 using System.Diagnostics.Metrics;
 using System.Windows;

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPFThreeDogsDistillery2.Models;
+using WPFThreeDogsDistillery2.ViewModel;
 
 namespace WPFThreeDogsDistillery2
 {
@@ -22,14 +23,11 @@ namespace WPFThreeDogsDistillery2
     public partial class Order2 : Page
     {
 
-        private readonly BottleModel _bottleModel;
-
         public Order2()
         {
             InitializeComponent();
-            _bottleModel = new BottleModel();
             // The DataContext serves as the starting point of Binding Paths
-            DataContext = _bottleModel;
+            DataContext = new OrderViewModel();
         }
 
         private void Button_Click_Home(object sender, RoutedEventArgs e)
@@ -37,60 +35,60 @@ namespace WPFThreeDogsDistillery2
             Home2 home = new Home2();
             this.NavigationService.Navigate(home);
         }
-        private void Button_Click_Spirit(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("");
-        }
-        private void Button_Click_Flavor(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("");
-        }
-        private void Button_Click_Font(object sender, RoutedEventArgs e)
-        {
-            if (Arial.IsChecked == true)
-            {
-                MessageBox.Show("Arial");
-            }
-            else if (Cursive.IsChecked == true)
-            {
-                MessageBox.Show("Cursive");
-            }
-            else if (Fantasy.IsChecked == true)
-            {
-                MessageBox.Show("Fantasy");
-            }
-            else if (Courier.IsChecked == true)
-            {
-                MessageBox.Show("Courier");
-            }
-            else if (Roman.IsChecked == true)
-            {
-                MessageBox.Show("Roman");
-            }
-        }
-        private void Button_Click_Color(object sender, RoutedEventArgs e)
-        {
-            if (Blue.IsChecked == true)
-            {
-                MessageBox.Show("Blue");
-            }
-            else if (Red.IsChecked == true)
-            {
-                MessageBox.Show("Red");
-            }
-            else if (Green.IsChecked == true)
-            {
-                MessageBox.Show("Green");
-            }
-            else if (Yellow.IsChecked == true)
-            {
-                MessageBox.Show("Yellow");
-            }
-            else if (Purple.IsChecked == true)
-            {
-                MessageBox.Show("Purple");
-            }
-        }
+        //private void Button_Click_Spirit(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show("");
+        //}
+        //private void Button_Click_Flavor(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show("");
+        //}
+    //private void Button_Click_Font(object sender, RoutedEventArgs e)
+    //{
+    //    if (Arial.IsChecked == true)
+    //    {
+    //        MessageBox.Show("Arial");
+    //    }
+    //    else if (Cursive.IsChecked == true)
+    //    {
+    //        MessageBox.Show("Cursive");
+    //    }
+    //    else if (Fantasy.IsChecked == true)
+    //    {
+    //        MessageBox.Show("Fantasy");
+    //    }
+    //    else if (Courier.IsChecked == true)
+    //    {
+    //        MessageBox.Show("Courier");
+    //    }
+    //    else if (Roman.IsChecked == true)
+    //    {
+    //        MessageBox.Show("Roman");
+    //    }
+    //}
+    //private void Button_Click_Color(object sender, RoutedEventArgs e)
+    //{
+    //    if (Blue.IsChecked == true)
+    //    {
+    //        MessageBox.Show("Blue");
+    //    }
+    //    else if (Red.IsChecked == true)
+    //    {
+    //        MessageBox.Show("Red");
+    //    }
+    //    else if (Green.IsChecked == true)
+    //    {
+    //        MessageBox.Show("Green");
+    //    }
+    //    else if (Yellow.IsChecked == true)
+    //    {
+    //        MessageBox.Show("Yellow");
+    //    }
+    //    else if (Purple.IsChecked == true)
+    //    {
+    //        MessageBox.Show("Purple");
+    //    }
+//}
     }
 
 

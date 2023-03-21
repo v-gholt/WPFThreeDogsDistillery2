@@ -1,7 +1,8 @@
 ﻿<Application x:Class="WPFThreeDogsDistillery2.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WPFThreeDogsDistillery2">
+             xmlns:local="clr-namespace:WPFThreeDogsDistillery2"
+             StartupUri="Order2.xaml">
     <Application.Resources>
 
         <Style TargetType="RadioButton">

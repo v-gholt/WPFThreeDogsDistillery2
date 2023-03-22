@@ -12,67 +12,67 @@ using System.Windows;
 
 namespace WPFThreeDogsDistillery2.ViewModel
 {
-    public class BottleViewModel : INotifyPropertyChanged
-    {
-        private BottleModel bottle;
+    //public class BottleViewModel : INotifyPropertyChanged
+    //{
+    //    private BottleModel bottle;
 
-        public BottleViewModel(BottleModel bottle)
-        {
-            this.bottle = bottle;
-        }
+    //    public BottleViewModel(BottleModel bottle)
+    //    {
+    //        this.bottle = bottle;
+    //    }
 
-        public string Spirit
-        {
-            get { return bottle.Spirit; }
-            set 
-            { 
-                if (bottle.Spirit != value)
-                {
-                    bottle.Spirit = value;
-                    OnPropertyChanged("Spirit");
-                }
-            }
-        }
+        //public string Spirit
+        //{
+        //    get { return bottle.Spirit; }
+        //    set 
+        //    { 
+        //        if (bottle.Spirit != value)
+        //        {
+        //            bottle.Spirit = value;
+        //            OnPropertyChanged("Spirit");
+        //        }
+        //    }
+        //}
 
-        public string Flavor
-        {
-            get { return bottle.Flavor; }
-            set
-            {
-                if (bottle.Flavor != value)
-                {
-                    bottle.Flavor = value;
-                    OnPropertyChanged("Flavor");
-                }
-            }
-        }
+        //public string Flavor
+        //{
+        //    get { return bottle.Flavor; }
+        //    set
+        //    {
+        //        if (bottle.Flavor != value)
+        //        {
+        //            bottle.Flavor = value;
+        //            OnPropertyChanged("Flavor");
+        //        }
+        //    }
+        //}
 
-        public int Quantity
-        {
-            get { return bottle.Quantity; }
-            set
-            {
-                if (bottle.Quantity != value)
-                {
-                    bottle.Quantity = value;
-                    OnPropertyChanged("Quantity");
-                }
-            }
-        }
+        //public int Quantity
+        //{
+        //    get { return bottle.Quantity; }
+        //    set
+        //    {
+        //        if (bottle.Quantity != value)
+        //        {
+        //            bottle.Quantity = value;
+        //            OnPropertyChanged("Quantity");
+        //        }
+        //    }
+        //}
 
-        private void Button_Click_Order(object sender, RoutedEventArgs e)
-        {
+        //private void Button_Click_Order(object sender, RoutedEventArgs e)
+        //{
 
-        }
+        //}
 
-        private void Button_Click_Spirit(object sender, RoutedEventArgs e)
-        {
-            OnPropertyChanged("Spirit");
-        }
-        private void Button_Click_Flavor(object sender, RoutedEventArgs e)
-        {
-            OnPropertyChanged("Flavor");
-        }
+        //private void Button_Click_Spirit(object sender, RoutedEventArgs e)
+        //{
+        //    OnPropertyChanged("Spirit");
+        //}
+        //private void Button_Click_Flavor(object sender, RoutedEventArgs e)
+        //{
+        //    OnPropertyChanged("Flavor");
+        //}
         //private void Button_Click_Font(object sender, RoutedEventArgs e)
         //{
         //    if (Arial.IsChecked == true)
@@ -121,11 +121,11 @@ namespace WPFThreeDogsDistillery2.ViewModel
         //}
 
 
-        public event PropertyChangedEventHandler PropertyChanged;
+    //    public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
+    //    protected void OnPropertyChanged(string propertyName)
+    //    {
+    //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    //    }
+    //}
 }

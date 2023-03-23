@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFThreeDogsDistillery2", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{182F453E-82C2-4876-A5A2-4C4A7FD02242}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMVVM", "..\..\WPFTutorials\SimpleMVVM\SimpleMVVM.csproj", "{F395E4CF-7923-4AE5-9E1E-0F1DAB0AD3F0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,10 +17,6 @@ Global
 		{BF36871C-E20E-4214-B789-F6819769BF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF36871C-E20E-4214-B789-F6819769BF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF36871C-E20E-4214-B789-F6819769BF14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F395E4CF-7923-4AE5-9E1E-0F1DAB0AD3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F395E4CF-7923-4AE5-9E1E-0F1DAB0AD3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F395E4CF-7923-4AE5-9E1E-0F1DAB0AD3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F395E4CF-7923-4AE5-9E1E-0F1DAB0AD3F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,8 +11,8 @@ namespace WPFThreeDogsDistillery2.Models
     public class BottleModel : INotifyPropertyChanged
     {
 
-        private SpiritModel _spirit;
-        public SpiritModel Spirit
+        private SpiritModel? _spirit;
+        public SpiritModel? Spirit
         {
             get { return _spirit; }
                
@@ -26,8 +26,8 @@ namespace WPFThreeDogsDistillery2.Models
             }
         }
 
-        private FlavorModel _flavor;
-        public FlavorModel Flavor
+        private FlavorModel? _flavor;
+        public FlavorModel? Flavor
         {
             get { return _flavor; }
             set
@@ -40,8 +40,8 @@ namespace WPFThreeDogsDistillery2.Models
             }
         }
 
-        private QuantityModel _quantity;
-        public QuantityModel Quantity
+        private QuantityModel? _quantity;
+        public QuantityModel? Quantity
         {
             get { return _quantity; }
 
@@ -55,8 +55,8 @@ namespace WPFThreeDogsDistillery2.Models
             }
         }
 
-        private LabelModel _label;
-        public LabelModel Label
+        private LabelModel? _label;
+        public LabelModel? Label
         {
             get { return _label; }
 
@@ -70,8 +70,8 @@ namespace WPFThreeDogsDistillery2.Models
             }
         }
 
-        private FontFamilyModel _fontFamily;
-        public FontFamilyModel FontFamily
+        private FontFamilyModel? _fontFamily;
+        public FontFamilyModel? FontFamily
         {
             get { return _fontFamily; }
 
@@ -85,8 +85,8 @@ namespace WPFThreeDogsDistillery2.Models
             }
         }
 
-        private FontColorModel _fontColor;
-        public FontColorModel FontColor
+        private FontColorModel? _fontColor;
+        public FontColorModel? FontColor
         {
             get { return _fontColor; }
 
@@ -100,15 +100,15 @@ namespace WPFThreeDogsDistillery2.Models
             }
         }
 
-        public BottleModel(SpiritModel spirit, FlavorModel flavor, QuantityModel quantity, LabelModel label, FontFamilyModel fontFamily, FontColorModel fontColor)
-        {
-            Spirit = spirit;
-            Flavor = flavor;
-            Quantity = quantity;
-            Label = label;
-            FontFamily = fontFamily;
-            FontColor = fontColor;
-        }
+        //public BottleModel(SpiritModel spirit, FlavorModel flavor, QuantityModel quantity, LabelModel label, FontFamilyModel fontFamily, FontColorModel fontColor)
+        //{
+        //    Spirit = spirit;
+        //    Flavor = flavor;
+        //    Quantity = quantity;
+        //    Label = label;
+        //    FontFamily = fontFamily;
+        //    FontColor = fontColor;
+        //}
 
         public event PropertyChangedEventHandler PropertyChanged;
 

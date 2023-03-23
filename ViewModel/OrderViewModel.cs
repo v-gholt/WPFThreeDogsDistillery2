@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using System.Xml.Linq;
 using WPFThreeDogsDistillery2.Models;
 
@@ -13,12 +16,21 @@ namespace WPFThreeDogsDistillery2.ViewModel
 {
     public class OrderViewModel
     {
-        public BottleModel? bottle;
 
-        //public OrderViewModel(BottleModel bottle)
-        //{
-        //    this.bottle = bottle;
-        //}
+        public SpiritModel? SelectedSpirit { get; set; }
+
+        public FlavorModel? SelectedFlavor { get; set; }
+
+        public QuantityModel? SelectedQuantity { get; set; }
+
+        public FontFamilyModel? SelectedFontFamily { get; set; }
+
+        public FontColorModel? SelectedFontColor { get; set; }
+
+        public BottleModel Bottle { get; set; } = new()
+        {
+        };
+        
 
         public List<SpiritModel> Spirits { get; set; } = new () 
         {
@@ -59,7 +71,6 @@ namespace WPFThreeDogsDistillery2.ViewModel
             new FontColorModel("Blue", "Blue"),
             new FontColorModel("Green", "Green"),
         };
-
 
     }
 }

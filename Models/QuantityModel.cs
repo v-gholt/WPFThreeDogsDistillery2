@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace WPFThreeDogsDistillery2.Models
 {
@@ -14,6 +15,11 @@ namespace WPFThreeDogsDistillery2.Models
             Quantity = quantity;
         }
         public int Quantity { get; set; }
+
+        public override string ToString()
+        {
+            return Quantity.ToString();
+        }
 
     }
 }

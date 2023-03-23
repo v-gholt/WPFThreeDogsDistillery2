@@ -15,9 +15,14 @@ namespace WPFThreeDogsDistillery2
     /// </summary>
     public partial class App : Application
     {
-        protected override void OnStartup(StartupEventArgs e)
-        {
-        }
+        //protected override void OnStartup(StartupEventArgs e)
+        //{
+        //    base.OnStartup(e);
+        //    WPFThreeDogsDistillery2.MainWindow window = new MainWindow();
+        //    OrderViewModel VM = new OrderViewModel();
+        //    window.DataContext = VM;
+        //    window.Show();
+        //}
     }
 
 }

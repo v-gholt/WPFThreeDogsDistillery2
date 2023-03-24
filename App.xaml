@@ -18,6 +18,21 @@
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
 
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Foreground" Value="DarkRed"/>
+            <Setter Property="Background" Value="Tan"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter ContentSource="Content"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style TargetType="Button">
             <Setter Property="Background" Value="Tan" />
             <Setter Property="Foreground" Value="DarkRed"/>

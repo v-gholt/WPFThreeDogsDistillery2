@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,10 +15,23 @@ using WPFThreeDogsDistillery2.Models;
 
 namespace WPFThreeDogsDistillery2.ViewModel
 {
-    public class OrderViewModel
+    public class OrderViewModel : INotifyPropertyChanged
     {
+        private SpiritModel? _selectedSpirit;
+        public SpiritModel? SelectedSpirit 
+        {
+            get { return _selectedSpirit; }
 
-        public SpiritModel? SelectedSpirit { get; set; }
+            set
+            {
+                if (_selectedSpirit != value)
+                {
+                    _selectedSpirit = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
 
         public FlavorModel? SelectedFlavor { get; set; }
 
@@ -27,9 +41,7 @@ namespace WPFThreeDogsDistillery2.ViewModel
 
         public FontColorModel? SelectedFontColor { get; set; }
 
-        public BottleModel Bottle { get; set; } = new()
-        {
-        };
+        public BottleModel Bottle { get; set; } = new();
         
 
         public List<SpiritModel> Spirits { get; set; } = new () 
@@ -72,5 +84,13 @@ namespace WPFThreeDogsDistillery2.ViewModel
             new FontColorModel("Green", "Green"),
         };
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
     }
+
 }

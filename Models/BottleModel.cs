@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Windows.Media;
+using System.Runtime.CompilerServices;
 
 namespace WPFThreeDogsDistillery2.Models
 {
@@ -21,10 +22,19 @@ namespace WPFThreeDogsDistillery2.Models
                 if (_spirit != value)
                 {
                     _spirit = value;
-                    OnPropertyChanged("Spirit");
+                    OnPropertyChanged();
                 }
             }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
 
         private FlavorModel? _flavor;
         public FlavorModel? Flavor
@@ -110,12 +120,6 @@ namespace WPFThreeDogsDistillery2.Models
         //    FontColor = fontColor;
         //}
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
     }
 

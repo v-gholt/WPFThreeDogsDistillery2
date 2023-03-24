@@ -43,8 +43,8 @@
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>-->
-                
-                    <ListBox x:Name="spiritStack" ItemsSource="{Binding Path=Spirits}" SelectedItem="{Binding Path=SelectedSpirit, Mode=TwoWay}">
+
+                    <ListBox x:Name="spiritStack" ItemsSource="{Binding Spirits}" SelectedItem="{Binding SelectedSpirit}">
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Orientation="Horizontal"/>
@@ -52,7 +52,7 @@
                         </ListBox.ItemsPanel>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Button DataContext="{Binding ElementName=spiritStack, Path=SelectedSpirit}" Content="{Binding}"/>
+                                <TextBlock Text="{Binding}"/>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
@@ -130,7 +130,7 @@
                     <TextBlock Foreground="Green" FontSize="14" Text="Preview"/>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Green" FontSize="12" Text="Spirit:"></TextBlock>
-                        <TextBlock Text="{Binding ElementName=spiritStack, Path=DataContext.SelectedSpirit}"/>
+                        <TextBlock Text="{Binding SelectedSpirit}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Green" FontSize="12" Text="Flavor:"></TextBlock>

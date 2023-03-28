@@ -32,14 +32,71 @@ namespace WPFThreeDogsDistillery2.ViewModel
             }
         }
 
+        private FlavorModel? _selectedFlavor;
+        public FlavorModel? SelectedFlavor
+        {
+            get { return _selectedFlavor; }
 
-        public FlavorModel? SelectedFlavor { get; set; }
+            set
+            {
+                if (_selectedFlavor != value)
+                {
+                    _selectedFlavor = value;
+                    OnPropertyChanged(nameof(SelectedFlavor));
+                };
+            }
+        }
 
-        public QuantityModel? SelectedQuantity { get; set; }
+        public int MaxWhiskeyBottles { get; set; } = 2;
 
-        public FontFamilyModel? SelectedFontFamily { get; set; }
+        private QuantityModel? _selectedQuantity;
+        public QuantityModel? SelectedQuantity
+        {
+            get { return _selectedQuantity; }
 
-        public FontColorModel? SelectedFontColor { get; set; }
+            set
+            {
+                if (SelectedSpirit?.Name == "Whiskey" && value?.Quantity > MaxWhiskeyBottles)
+                {
+                    MessageBox.Show($"Sorry, you can only order up to {MaxWhiskeyBottles} bottles of whiskey.");
+                }
+                else if (_selectedQuantity != value)
+                {
+                    _selectedQuantity = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private FontFamilyModel? _selectedFontFamily;
+        public FontFamilyModel? SelectedFontFamily
+        {
+            get { return _selectedFontFamily; }
+
+            set
+            {
+                if (_selectedFontFamily != value)
+                {
+                    _selectedFontFamily = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private FontColorModel? _selectedFontColor;
+        public FontColorModel? SelectedFontColor
+        {
+            get { return _selectedFontColor; }
+
+            set
+            {
+                if (_selectedFontColor != value)
+                {
+                    _selectedFontColor = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
         public BottleModel Bottle { get; set; } = new();
         
@@ -51,11 +108,26 @@ namespace WPFThreeDogsDistillery2.ViewModel
             new SpiritModel("Vodka", "Made from wheat, rye, or potato. Fermented for 30 days. Triple distilled."),
         };
 
-        public List<FlavorModel> Flavors { get; set; } = new ()
+        public List<FlavorModel> Flavors { get; set; } = new()
         {
-            new FlavorModel("Cherry", "/cherry.jpg"),
-            new FlavorModel("Apple", "/apple.jpg"),
-            new FlavorModel("Watermelon Candy", "/candy.jpg"),
+            new FlavorModel("Cherry", "/cherry.jpg", new List<FontFamilyModel>
+            {
+                new FontFamilyModel("Arial", "Arial"),
+                new FontFamilyModel("Segoe", "Segoe"),
+                new FontFamilyModel("Wingdings", "Wingdings")
+            }),
+            new FlavorModel("Apple", "/apple.jpg", new List<FontFamilyModel>
+            {
+                new FontFamilyModel("Monaco", "Monaco"),
+                new FontFamilyModel("Papyrus", "Papyrus"),
+                new FontFamilyModel("Gothic", "Gothic")
+            }),
+            new FlavorModel("Watermelon Candy", "/candy.jpg", new List<FontFamilyModel>
+            {
+                new FontFamilyModel("Hack", "Hack"),
+                new FontFamilyModel("Courier", "Courier New"),
+                new FontFamilyModel("Roman", "Times New Roman")
+            }),
         };
 
         public List<QuantityModel> Quantities { get; set; } = new()
@@ -70,12 +142,9 @@ namespace WPFThreeDogsDistillery2.ViewModel
             new LabelModel("Geiselle's Bottle"),
         };
 
-        public List<FontFamilyModel> FontFamilies { get; set; } = new()
-        {
-            new FontFamilyModel("Arial", "Arial"),
-            new FontFamilyModel("Roman", "Roman"),
-            new FontFamilyModel("Fantasy", "Fantasy"),
-        };
+        //public List<FontFamilyModel> FontFamilies => SelectedFlavor?.FontFamilies ?? new List<FontFamilyModel>();
+        public List<FontFamilyModel>? FontFamilies { get; set; }
+
 
         public List<FontColorModel> FontColors { get; set; } = new()
         {
@@ -84,12 +153,14 @@ namespace WPFThreeDogsDistillery2.ViewModel
             new FontColorModel("Green", "Green"),
         };
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null!)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
 
     }
 

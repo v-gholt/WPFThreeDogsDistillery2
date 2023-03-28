@@ -5,23 +5,34 @@
              StartupUri="Order2.xaml">
     <Application.Resources>
 
-        <Style TargetType="RadioButton">
+        <!--<Style TargetType="RadioButton">
             <Setter Property="Background" Value="Tan" />
             <Setter Property="Foreground" Value="DarkRed"/>
             <Setter Property="FontSize" Value="8"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Margin" Value="0,0,10,0"/>
-        </Style>
+        </Style>-->
 
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="DarkRed"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
 
+        <Style TargetType="Image">
+            <Setter Property="Width" Value="90"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
         <Style TargetType="ListBoxItem">
             <Setter Property="Foreground" Value="DarkRed"/>
             <Setter Property="Background" Value="Tan"/>
+            <Setter Property="FontSize" Value="10"/>
             <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="DarkRed"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="70"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ListBoxItem">
@@ -40,7 +51,7 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="BorderBrush" Value="DarkRed"/>
             <Setter Property="Width" Value="100"/>
-            <Setter Property="Height" Value="100"/>
+            <Setter Property="Height" Value="50"/>
         </Style>
 
         <Style BasedOn="{StaticResource {x:Type Button}}" x:Key="HeaderButtons" TargetType="{x:Type Button}">

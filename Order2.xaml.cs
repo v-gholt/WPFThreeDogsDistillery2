@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,65 +36,21 @@ namespace WPFThreeDogsDistillery2
             Home2 home = new Home2();
             this.NavigationService.Navigate(home);
         }
-        //private void Button_Click_Spirit(object sender, RoutedEventArgs e)
-        //{
-        //    ;
-        //}
+        private void selectImageButton_Click(object sender, EventArgs e)
+        {
+            //using (OpenFileDialog dlg = new OpenFileDialog())
+            //{
+            //    dlg.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
+            //    if (dlg.ShowDialog() == DialogResult.OK)
+            //    {
+            //        // Display the selected image in a PictureBox control
+            //        Image image = Image.FromFile(dlg.FileName);
+            //        pictureBox1.Image = image;
+            //    }
+            //}
+        }
 
-        //private void Button_Click_Spirit(object sender, RoutedEventArgs e)
-        //{
-        //    MessageBox.Show("");
-        //}
-        //private void Button_Click_Flavor(object sender, RoutedEventArgs e)
-        //{
-        //    MessageBox.Show("");
-        //}
-        //private void Button_Click_Font(object sender, RoutedEventArgs e)
-        //{
-        //    if (Arial.IsChecked == true)
-        //    {
-        //        MessageBox.Show("Arial");
-        //    }
-        //    else if (Cursive.IsChecked == true)
-        //    {
-        //        MessageBox.Show("Cursive");
-        //    }
-        //    else if (Fantasy.IsChecked == true)
-        //    {
-        //        MessageBox.Show("Fantasy");
-        //    }
-        //    else if (Courier.IsChecked == true)
-        //    {
-        //        MessageBox.Show("Courier");
-        //    }
-        //    else if (Roman.IsChecked == true)
-        //    {
-        //        MessageBox.Show("Roman");
-        //    }
-        //}
-        //private void Button_Click_Color(object sender, RoutedEventArgs e)
-        //{
-        //    if (Blue.IsChecked == true)
-        //    {
-        //        MessageBox.Show("Blue");
-        //    }
-        //    else if (Red.IsChecked == true)
-        //    {
-        //        MessageBox.Show("Red");
-        //    }
-        //    else if (Green.IsChecked == true)
-        //    {
-        //        MessageBox.Show("Green");
-        //    }
-        //    else if (Yellow.IsChecked == true)
-        //    {
-        //        MessageBox.Show("Yellow");
-        //    }
-        //    else if (Purple.IsChecked == true)
-        //    {
-        //        MessageBox.Show("Purple");
-        //    }
-        //}
+
     }
 
 

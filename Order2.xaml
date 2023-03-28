@@ -16,8 +16,8 @@
 
         <StackPanel Background="Tan" Orientation="Horizontal">
             <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" />
-            <TextBlock Margin="10,0,10,0" Background="Tan" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Three Dog's Distillery- Order" FontSize="36"/>
-            <StackPanel Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0,0,0">
+            <TextBlock Margin="200,0,10,0" Background="Tan" VerticalAlignment="Center" Text="Three Dog's Distillery- Order" FontSize="36"/>
+            <StackPanel Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="400,0,0,0">
                 <Button Style="{StaticResource HeaderButtons}">Log In</Button>
                 <Button Style="{StaticResource HeaderButtons}">Sign Up</Button>
                 <Button Click="Button_Click_Home" Style="{StaticResource HeaderButtons}">Home</Button>
@@ -79,7 +79,7 @@
                         </ListBox>
                     </StackPanel>
                     <StackPanel Margin="0,10,0,0">
-                        <TextBlock Foreground="Green" FontSize="14" Text="Preview"/>
+                        <TextBlock TextDecorations="Underline" Foreground="Green" FontSize="14" Text="Preview"/>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Foreground="Green" FontSize="12" Text="Spirit:"></TextBlock>
                             <TextBlock Text="{Binding SelectedSpirit.Name}"/>
@@ -102,10 +102,10 @@
                     <TextBlock FontSize="14" Text="Choose Your Bottle's Name"/>
                     <TextBlock FontSize="10" Text="*up to 50 characters"/>
                     <StackPanel Margin="0,10,0,10">
-                        <TextBox x:Name="labelName" Width="400" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" BorderBrush="Black"/>
+                            <TextBox TextChanged="TextBox_TextChanged"  x:Name="labelName" Width="400" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" BorderBrush="Black"/>
                     </StackPanel>
-                    <TextBlock FontSize="14" Text="Choose Your Label's Font"/>
-                    <ListBox x:Name="fontFamilyStack" ItemsSource="{Binding FontFamilies}" SelectedItem="{Binding SelectedFontFamily}">
+                    <TextBlock FontSize="14" Text="Choose Your Label's Font (first select flavor)"/>
+                        <ListBox x:Name="fontFamilyStack" ItemsSource="{Binding FontFamilies}" SelectedItem="{Binding SelectedFontFamily}">
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Orientation="Horizontal"/>
@@ -113,7 +113,7 @@
                         </ListBox.ItemsPanel>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock FontFamily="{Binding Name}" Text="{Binding}"/>
+                                    <TextBlock  FontFamily="{Binding Name}" Text="{Binding}"/>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
@@ -136,13 +136,11 @@
                     </StackPanel>
 
                     <StackPanel Margin="0,10,0,0">
-                        <TextBlock Foreground="Green" FontSize="14" Text="Preview"/>
+                            <TextBlock TextDecorations="Underline" Foreground="Green" FontSize="14" Text="Preview"/>
                         <TextBlock Text="{Binding ElementName=labelName, Path=Text}" 
-                                       FontFamily="{Binding SelectedFontFamily.FontFamily}" 
-                                       Foreground="{Binding SelectedFontColor.Name}" FontSize="18"
-                                       TextTrimming="CharacterEllipsis"
-                                       TextWrapping="NoWrap"
-                                       MaxWidth="200"
+                                       FontFamily="{Binding SelectedFontFamily.Name}" 
+                                       Foreground="{Binding SelectedFontColor.Name}" 
+                                       FontSize="18"
                                        HorizontalAlignment="Left"
                                        />
                     </StackPanel>
@@ -175,17 +173,15 @@
             </Border>
 
         </StackPanel>
-        <Button Command="{Binding Path=SubmitCommad}" x:Name="btnSubmit" FontSize="14" Background="Green" Foreground="White" Height="20" Content="CHECKOUT"/>
+        <!--<Button Command="{Binding Path=SubmitCommad}" x:Name="btnSubmit" FontSize="14" Background="Green" Foreground="White" Height="20" Content="CHECKOUT"/>-->
 
         <StackPanel Background="Tan" Orientation="Horizontal">
             <Image Source="/three_dogs_logo.8ae6f4828a986c6f5c01.jpg" HorizontalAlignment="Left" Width="201" Height="75"/>
-            <TextBlock Margin="500,0,10,0" Background="Tan" Width="389" Text="Three Dog's Distillery" FontSize="24"/>
-            <StackPanel  Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0,0,0">
-                <Button Click="Button_Click_Home" Style="{StaticResource HeaderButtons}" FontSize="18">Home</Button>
-                <Button Style="{StaticResource HeaderButtons}" FontSize="18">Contact Nick</Button>
-                <Button Style="{StaticResource HeaderButtons}" FontSize="18">About Us</Button>
+            <StackPanel  Background="Tan" Orientation="Horizontal" HorizontalAlignment="Right" Margin="1000,0,0,0">
+                <Button Click="Button_Click_Home" Style="{StaticResource HeaderButtons}">Home</Button>
+                <Button Style="{StaticResource HeaderButtons}">Contact Nick</Button>
+                <Button Style="{StaticResource HeaderButtons}">About Us</Button>
             </StackPanel>
-         </StackPanel>
-
+        </StackPanel>
     </StackPanel>
 </Page>

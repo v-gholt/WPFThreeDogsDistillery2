@@ -43,6 +43,8 @@ namespace WPFThreeDogsDistillery2.ViewModel
                 {
                     _selectedFlavor = value;
                     OnPropertyChanged(nameof(SelectedFlavor));
+                    FontFamilies = SelectedFlavor?.FontFamilies ?? new List<FontFamilyModel>();
+                    OnPropertyChanged(nameof(SelectedFlavor.FontFamilies));
                 };
             }
         }
@@ -124,9 +126,9 @@ namespace WPFThreeDogsDistillery2.ViewModel
             }),
             new FlavorModel("Watermelon Candy", "/candy.jpg", new List<FontFamilyModel>
             {
-                new FontFamilyModel("Hack", "Hack"),
-                new FontFamilyModel("Courier", "Courier New"),
-                new FontFamilyModel("Roman", "Times New Roman")
+                new FontFamilyModel("Cambria", "Cambria"),
+                new FontFamilyModel("Courier", "Courier"),
+                new FontFamilyModel("Times New Roman", "Times New Roman")
             }),
         };
 
@@ -137,10 +139,10 @@ namespace WPFThreeDogsDistillery2.ViewModel
             new QuantityModel(3),
         };
 
-        public List<LabelModel> Labels { get; set; } = new()
-        {
-            new LabelModel("Geiselle's Bottle"),
-        };
+        //public List<LabelModel> Labels { get; set; } = new()
+        //{
+        //    new LabelModel("Geiselle's Bottle"),
+        //};
 
         //public List<FontFamilyModel> FontFamilies => SelectedFlavor?.FontFamilies ?? new List<FontFamilyModel>();
         public List<FontFamilyModel>? FontFamilies { get; set; }

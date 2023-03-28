@@ -19,20 +19,20 @@
         </Style>
 
         <Style TargetType="Image">
-            <Setter Property="Width" Value="90"/>
-            <Setter Property="Height" Value="60"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Height" Value="50"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
 
         <Style TargetType="ListBoxItem">
             <Setter Property="Foreground" Value="DarkRed"/>
             <Setter Property="Background" Value="Tan"/>
-            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontSize" Value="12"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="BorderBrush" Value="DarkRed"/>
             <Setter Property="Margin" Value="10"/>
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="Height" Value="70"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="50"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ListBoxItem">
@@ -56,7 +56,7 @@
 
         <Style BasedOn="{StaticResource {x:Type Button}}" x:Key="HeaderButtons" TargetType="{x:Type Button}">
             <Setter Property="Margin" Value="10,0,10,0" />
-            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontSize" Value="14"/>
         </Style>
 
         <Style TargetType="{x:Type DataGridColumnHeader}">

@@ -50,6 +50,15 @@ namespace WPFThreeDogsDistillery2
             //}
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox && textBox.Text.Length > 50)
+            {
+                textBox.Text = textBox.Text.Substring(0, 50);
+                textBox.CaretIndex = textBox.Text.Length;
+            }
+        }
+
 
     }
 

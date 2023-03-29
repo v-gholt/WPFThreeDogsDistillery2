@@ -6,158 +6,28 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Windows.Media;
 using System.Runtime.CompilerServices;
+using System.Xml.Linq;
 
 namespace WPFThreeDogsDistillery2.Models
 {
-    public class BottleModel : INotifyPropertyChanged
+    public class BottleModel
     {
 
-        private SpiritModel? _spirit;
-        public SpiritModel? Spirit
+        public BottleModel(SpiritModel? selectedSpirit, FlavorModel? selectedFlavor, QuantityModel? selectedQuantity)
         {
-            get { return _spirit; }
-               
-            set
-            {
-                if (_spirit != value)
-                {
-                    _spirit = value;
-                    OnPropertyChanged();
-                }
-            }
+            SelectedSpirit = selectedSpirit;
+            SelectedFlavor = selectedFlavor;
+            SelectedQuantity = selectedQuantity;
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public SpiritModel? SelectedSpirit { get; }
+        public FlavorModel? SelectedFlavor { get; }
+        public QuantityModel? SelectedQuantity { get; }
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null!)
+        public override string ToString()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            return SelectedQuantity + " x " + SelectedFlavor + SelectedSpirit;
         }
-
-        private FlavorModel? _flavor;
-        public FlavorModel? Flavor
-        {
-            get { return _flavor; }
-            set
-            {
-                if (_flavor != value)
-                {
-                    _flavor = value;
-                    OnPropertyChanged("Flavor");
-                }
-            }
-        }
-
-        private QuantityModel? _quantity;
-        public QuantityModel? Quantity
-        {
-            get { return _quantity; }
-
-            set
-            {
-                if (_quantity != value)
-                {
-                    _quantity = value;
-                    OnPropertyChanged("Quantity");
-                }
-            }
-        }
-
-        private LabelModel? _label;
-        public LabelModel? Label
-        {
-            get { return _label; }
-
-            set
-            {
-                if (_label != value)
-                {
-                    _label = value;
-                    OnPropertyChanged("Label");
-                }
-            }
-        }
-
-        private FontFamilyModel? _fontFamily;
-        public FontFamilyModel? FontFamily
-        {
-            get { return _fontFamily; }
-
-            set
-            {
-                if (_fontFamily != value)
-                {
-                    _fontFamily = value;
-                    OnPropertyChanged("FontFamily");
-                }
-            }
-        }
-
-        private FontColorModel? _fontColor;
-        public FontColorModel? FontColor
-        {
-            get { return _fontColor; }
-
-            set
-            {
-                if (_fontColor != value)
-                {
-                    _fontColor = value;
-                    OnPropertyChanged("FontColor");
-                }
-            }
-        }
-
-        //public BottleModel(SpiritModel spirit, FlavorModel flavor, QuantityModel quantity, LabelModel label, FontFamilyModel fontFamily, FontColorModel fontColor)
-        //{
-        //    Spirit = spirit;
-        //    Flavor = flavor;
-        //    Quantity = quantity;
-        //    Label = label;
-        //    FontFamily = fontFamily;
-        //    FontColor = fontColor;
-        //}
-
-
     }
-
-    //public class PropertyDemo
-    //{
-    //    //private int Id;
-
-    //    //public int GetId()
-    //    //{
-    //    //    return Id;
-    //    //}
-
-    //    //public void SetId(int id)
-    //    //{
-    //    //    Id = id;
-    //    //}
-
-    //    private int _id;
-    //    public int Id
-    //    {
-    //        get
-    //        {
-    //            return _id;
-    //        }
-    //        set
-    //        {
-    //            _id = value;
-    //        }
-    //    }
-    //}
-
-    //public class PropertyConsumer
-    //{
-    //    PropertyDemo pd;
-
-    //    public void PropUpdater()
-    //    {
-    //        pd.Id = -1;
-    //        pd.SetId(-1);
-    //    }
-    //}
 }
 

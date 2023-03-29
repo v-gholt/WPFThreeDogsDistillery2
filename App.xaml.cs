@@ -5,8 +5,6 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using WPFThreeDogsDistillery2.Models;
-using WPFThreeDogsDistillery2.ViewModel;
 
 namespace WPFThreeDogsDistillery2
 {
@@ -15,14 +13,7 @@ namespace WPFThreeDogsDistillery2
     /// </summary>
     public partial class App : Application
     {
-        //protected override void OnStartup(StartupEventArgs e)
-        //{
-        //    base.OnStartup(e);
-        //    WPFThreeDogsDistillery2.MainWindow window = new MainWindow();
-        //    OrderViewModel VM = new OrderViewModel();
-        //    window.DataContext = VM;
-        //    window.Show();
-        //}
+
     }
 
 }

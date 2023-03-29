@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 using WPFThreeDogsDistillery2.Models;
 using WPFThreeDogsDistillery2.ViewModel;
 
@@ -56,9 +57,23 @@ namespace WPFThreeDogsDistillery2
             {
                 textBox.Text = textBox.Text.Substring(0, 50);
                 textBox.CaretIndex = textBox.Text.Length;
+                MessageBox.Show($"Sorry, you can only use 50 characters.");
             }
         }
 
+        CartModel cartModel = new CartModel();
+
+        private void AddToCartButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (spiritStack.SelectedItem != null && flavorStack.SelectedItem != null && quantityStack.SelectedItem != null)
+            {
+                var selectedSpirit = (SpiritModel)spiritStack.SelectedItem;
+                var selectedFlavor = (FlavorModel)flavorStack.SelectedItem;
+                var selectedQuantity = (QuantityModel)quantityStack.SelectedItem;
+                cartModel.AddToCart(selectedSpirit, selectedFlavor, selectedQuantity);
+            }
+
+        }
 
     }
 

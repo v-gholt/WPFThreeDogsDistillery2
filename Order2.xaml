@@ -93,7 +93,8 @@
                             <TextBlock Text="{Binding SelectedQuantity}"/>
                         </StackPanel>
                     </StackPanel>
-                </StackPanel>
+                        <Button Content="Add Bottle to Cart" Click="AddToCartButton_Click" Background="Green" Height="20"/>
+                    </StackPanel>
                 </Border>
 
                 <Border BorderThickness="2" BorderBrush="DarkRed">
@@ -154,7 +155,7 @@
                         <TextBlock Height="29" Width="400" FontSize="18">ORDER SUMMARY:</TextBlock>
                     </StackPanel>
                     <StackPanel Margin="10,50,10,10">
-                        <TextBlock>
+                        <!--<TextBlock>
                             <TextBlock.Text>
                                 <MultiBinding StringFormat=" {2} x {0} {1}">
                                     <Binding Path="SelectedFlavor.Name" />
@@ -162,7 +163,29 @@
                                     <Binding Path="SelectedQuantity" />
                                 </MultiBinding>
                             </TextBlock.Text>
-                        </TextBlock>
+                        </TextBlock>-->
+                        <!--<ItemsControl ItemsSource="{Binding Cart}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding}" />
+                                        --><!--<TextBlock Text="{Binding Spirit.Price, StringFormat='{}Total price: {0:C}'}" />--><!--
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>-->
+                        <ListBox x:Name="cartStack" ItemsSource="{Binding Cart}">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel/>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
                     </StackPanel>
                     <StackPanel Margin="10,500,10,10">
                         <TextBlock Text="Subtotal"/>

@@ -17,6 +17,17 @@ namespace WPFThreeDogsDistillery2.ViewModel
 {
     public class OrderViewModel : INotifyPropertyChanged
     {
+        //CartState _CartState = new CartState();
+
+        //public List<BottleModel> CartItems
+        //{
+        //    get { return _CartState.GetCartItems(); }
+        //}
+        //public void AddSelectedSpiritToCart_Click(object sender, RoutedEventArgs e)
+        //{
+        //    _CartState.AddCartItem(new BottleModel(SelectedSpirit, SelectedFlavor, SelectedQuantity));
+        //}
+
         private SpiritModel? _selectedSpirit;
         public SpiritModel? SelectedSpirit 
         {
@@ -28,6 +39,7 @@ namespace WPFThreeDogsDistillery2.ViewModel
                 {
                     _selectedSpirit = value;
                     OnPropertyChanged();
+                    //CartState.AddCartItem(new BottleModel { Spirit = SelectedSpirit });
                 }
             }
         }
@@ -100,8 +112,47 @@ namespace WPFThreeDogsDistillery2.ViewModel
             }
         }
 
-        public BottleModel Bottle { get; set; } = new();
-        
+        private List<CartModel> _cart = new List<CartModel>();
+
+        public List<CartModel> Cart
+        {
+            get => _cart;
+            set
+            {
+                if (value != _cart)
+                {
+                    _cart = value;
+                    OnPropertyChanged(nameof(Cart));
+                }
+            }
+        }
+
+        //public void AddToCart(CartModel cartItem)
+        //{
+        //    _cart.Add(cartItem);
+        //    OnPropertyChanged(nameof(Cart));
+        //}
+
+
+        //class CartState
+        //{
+        //    List<BottleModel> _CartItems = new List<BottleModel>();
+
+        //    public void AddCartItem(BottleModel cartItem)
+        //    {
+        //        _CartItems.Add(cartItem);
+        //    }
+
+        //    public void RemoveCartItem(int index)
+        //    {
+        //        _CartItems.RemoveAt(index);
+        //    }
+
+        //    public List<BottleModel> GetCartItems()
+        //    {
+        //        return _CartItems;
+        //    }
+        //}
 
         public List<SpiritModel> Spirits { get; set; } = new () 
         {
@@ -154,6 +205,8 @@ namespace WPFThreeDogsDistillery2.ViewModel
             new FontColorModel("Blue", "Blue"),
             new FontColorModel("Green", "Green"),
         };
+
+
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
